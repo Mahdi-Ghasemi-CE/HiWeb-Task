@@ -10,6 +10,9 @@ builder.Services.AddOptionConfiguration(configuration);
 // DbContext Configuration
 builder.Services.AddDbContext<AppDbContext>();
 
+// MediatR Configuration
+builder.Services.AddMediatRConfiguration();
+
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen();
