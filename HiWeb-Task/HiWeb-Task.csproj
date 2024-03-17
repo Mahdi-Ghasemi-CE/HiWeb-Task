@@ -27,10 +27,6 @@
       <Folder Include="Application\Interfaces\" />
       <Folder Include="Application\Mappers\" />
       <Folder Include="Application\Models\" />
-      <Folder Include="Domain\Course\" />
-      <Folder Include="Domain\Professor\" />
-      <Folder Include="Domain\Student\" />
-      <Folder Include="Domain\Term\" />
       <Folder Include="Infrastructure\Migrations\" />
       <Folder Include="Infrastructure\Repository\" />
     </ItemGroup>
