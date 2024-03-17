@@ -27,7 +27,6 @@
       <Folder Include="Application\Mappers\" />
       <Folder Include="Application\Models\" />
       <Folder Include="Infrastructure\Migrations\" />
-      <Folder Include="Infrastructure\Repository\" />
     </ItemGroup>
 
 </Project>
