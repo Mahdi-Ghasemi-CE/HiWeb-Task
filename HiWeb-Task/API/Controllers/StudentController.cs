@@ -1,3 +1,5 @@
+using HiWeb_Task.API.Extensions;
+using HiWeb_Task.API.Models.Students;
 using HiWeb_Task.Application.Handlers.Students.Commands;
 using HiWeb_Task.Application.Models.Students;
 using MediatR;
@@ -7,7 +9,7 @@ namespace HiWeb_Task.API.Controllers;
 
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class StudentController: ControllerBase
 {
     private readonly IMediator _mediator;
@@ -17,13 +19,14 @@ public class StudentController: ControllerBase
         _mediator = mediator;
     }
     
-    [HttpGet("AddStudent")]
-    public async Task<IActionResult> AddStudent()
+    [HttpPost("AddStudent")]
+    public async Task<IActionResult> AddStudent([FromBody] AddStudentRequest request)
     {
-        var res = await _mediator.Send(new AddStudentCommand()
+        var response = await _mediator.Send(new AddStudentCommand()
         {
-            Name = "Mahdi Ghasemi"
+            Name = request.Name
         });
-        return Ok(res);
+        
+        return this.ReturnResponse(response);
     }
 }
