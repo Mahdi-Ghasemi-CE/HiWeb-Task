@@ -23,7 +23,7 @@
 
     <ItemGroup>
       <Folder Include="API\Extensions\Middlewares\" />
-ControllerExtension      <Folder Include="Application\Handlers\Students\Queries\" />
+      <Folder Include="Application\Handlers\Students\Queries\" />
       <Folder Include="Application\Mappers\" />
       <Folder Include="Application\Models\Students\Queries\" />
       <Folder Include="Infrastructure\Migrations\" />
