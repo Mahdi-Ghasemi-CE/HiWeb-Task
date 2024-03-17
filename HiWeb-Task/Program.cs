@@ -1,10 +1,14 @@
 using HiWeb_Task.API.Extensions.DependencyInjections;
+using HiWeb_Task.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Option Configuration
 var configuration = builder.Configuration;
 builder.Services.AddOptionConfiguration(configuration);
+
+// DbContext Configuration
+builder.Services.AddDbContext<AppDbContext>();
 
 builder.Services.AddEndpointsApiExplorer();
 
