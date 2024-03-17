@@ -25,7 +25,6 @@
       <Folder Include="API\Models\" />
       <Folder Include="Application\Handlers\" />
       <Folder Include="Application\Mappers\" />
-      <Folder Include="Application\Models\" />
       <Folder Include="Infrastructure\Migrations\" />
     </ItemGroup>
 
