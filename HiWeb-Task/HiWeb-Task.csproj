@@ -9,6 +9,13 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.2"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.3" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.3">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.2" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.0" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
 
@@ -21,7 +28,10 @@
       <Folder Include="Application\Interfaces\" />
       <Folder Include="Application\Mappers\" />
       <Folder Include="Application\Models\" />
-      <Folder Include="Domain\" />
+      <Folder Include="Domain\Course\" />
+      <Folder Include="Domain\Professor\" />
+      <Folder Include="Domain\Student\" />
+      <Folder Include="Domain\Term\" />
       <Folder Include="Infrastructure\Migrations\" />
       <Folder Include="Infrastructure\Repository\" />
     </ItemGroup>
