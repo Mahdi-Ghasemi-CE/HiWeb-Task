@@ -13,6 +13,9 @@ builder.Services.AddDbContext<AppDbContext>();
 // MediatR Configuration
 builder.Services.AddMediatRConfiguration();
 
+// Services
+builder.Services.AddServices();
+
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen();

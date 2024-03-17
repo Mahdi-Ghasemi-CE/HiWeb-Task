@@ -27,31 +27,37 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     public void Add(TEntity entity)
     {
         _dbContext.Set<TEntity>().Add(entity);
+        _dbContext.SaveChanges();
     }
 
     public void Add(IEnumerable<TEntity> entities)
     {
         _dbContext.Set<TEntity>().AddRange(entities);
+        _dbContext.SaveChanges();
     }
 
     public void Remove(TEntity entity)
     {
         _dbContext.Set<TEntity>().Remove(entity);
+        _dbContext.SaveChanges();
     }
 
     public void Remove(IEnumerable<TEntity> entities)
     {
         _dbContext.Set<TEntity>().RemoveRange(entities);
+        _dbContext.SaveChanges();
     }
 
     public void Update(TEntity entity)
     {
         _dbContext.Set<TEntity>().Update(entity);
+        _dbContext.SaveChanges();
     }
 
     public void Update(IEnumerable<TEntity> entities)
     {
         _dbContext.Set<TEntity>().UpdateRange(entities);
+        _dbContext.SaveChanges();
     }
 
     #endregion
