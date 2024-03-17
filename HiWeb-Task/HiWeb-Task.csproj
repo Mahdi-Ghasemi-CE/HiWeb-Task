@@ -22,11 +22,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="API\Controllers\" />
       <Folder Include="API\Extensions\Middlewares\" />
       <Folder Include="API\Models\" />
-      <Folder Include="Application\Handlers\" />
+      <Folder Include="Application\Handlers\Students\Queries\" />
       <Folder Include="Application\Mappers\" />
+      <Folder Include="Application\Models\Students\Queries\" />
       <Folder Include="Infrastructure\Migrations\" />
     </ItemGroup>
 
