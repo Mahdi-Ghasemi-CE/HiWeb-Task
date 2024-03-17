@@ -21,7 +21,6 @@
 
     <ItemGroup>
       <Folder Include="API\Controllers\" />
-      <Folder Include="API\Extensions\DependencyInjections\" />
       <Folder Include="API\Extensions\Middlewares\" />
       <Folder Include="API\Models\" />
       <Folder Include="Application\Handlers\" />
