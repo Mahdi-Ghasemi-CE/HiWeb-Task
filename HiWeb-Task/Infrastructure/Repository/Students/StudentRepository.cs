@@ -13,9 +13,21 @@ public class StudentRepository :Repository<Student>,IStudentRepository
         _queryable = dbContext.Set<Student>();
     }
 
-    public Task<Student> StudentsWithJointCourseInTerm()
+    public async Task<List<Student>> StudentsWithCommonCoursesInTerm(int termId)
     {
-        throw new NotImplementedException();
+        var commonCourses = 
+            await 
+                _dbContext
+                .Courses
+                .Where(c => c.Term.TermId == termId)
+                .Select(c => c.CourseId)
+                .ToListAsync();
+
+        return await 
+                _dbContext
+                .Students
+                .Where(s => s.Courses.Any(c => commonCourses.Contains(c.CourseId)))
+                .ToListAsync();
     }
 
     public async Task<Student> Get(int id)

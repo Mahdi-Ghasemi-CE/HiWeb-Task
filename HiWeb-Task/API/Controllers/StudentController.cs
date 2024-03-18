@@ -2,6 +2,7 @@ using HiWeb_Task.API.Extensions;
 using HiWeb_Task.API.Models.Students;
 using HiWeb_Task.Application.Handlers.Students.Commands;
 using HiWeb_Task.Application.Models.Students;
+using HiWeb_Task.Application.Models.Students.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -36,6 +37,17 @@ public class StudentController: ControllerBase
         var response = await _mediator.Send(new DeleteStudentCommand()
         {
             StudentId = request.StudentId
+        });
+        
+        return this.ReturnResponse(response);
+    }
+    
+    [HttpPost("GetStudentsWithCommonCoursesInTerm")]
+    public async Task<IActionResult> GetStudentsWithCommonCoursesInTerm([FromBody] GetStudentsWithCommonCoursesInTermRequest request)
+    {
+        var response = await _mediator.Send(new GetStudentsWithCommonCoursesInTermQuery()
+        {
+            TermId = request.TermId
         });
         
         return this.ReturnResponse(response);

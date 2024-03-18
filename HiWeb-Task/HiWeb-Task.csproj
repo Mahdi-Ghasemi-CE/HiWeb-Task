@@ -25,12 +25,10 @@
       <Folder Include="API\Extensions\Middlewares\" />
       <Folder Include="Application\Handlers\Courses\Queries\" />
       <Folder Include="Application\Handlers\Professors\Queries\" />
-      <Folder Include="Application\Handlers\Students\Queries\" />
       <Folder Include="Application\Handlers\Terms\Queries\" />
       <Folder Include="Application\Mappers\" />
       <Folder Include="Application\Models\Courses\Queries\" />
       <Folder Include="Application\Models\Professors\Queries\" />
-      <Folder Include="Application\Models\Students\Queries\" />
       <Folder Include="Application\Models\Terms\Queries\" />
       <Folder Include="Infrastructure\Migrations\" />
     </ItemGroup>
