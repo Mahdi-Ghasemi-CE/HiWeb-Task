@@ -4,6 +4,7 @@ public class Course
 {
     public int CourseId { get; set; }
     public string Name { get; set; }
+    public Professor.Professor Professor { get; set; }
+    public Term.Term Term { get; set; }
     public ICollection<Student.Student> Students { get; set; }
-    public ICollection<Term.Term> Terms { get; set; }
 }
