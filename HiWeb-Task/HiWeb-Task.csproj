@@ -23,20 +23,14 @@
 
     <ItemGroup>
       <Folder Include="API\Extensions\Middlewares\" />
-      <Folder Include="API\Models\Courses\" />
-      <Folder Include="API\Models\Terms\" />
-      <Folder Include="Application\Handlers\Courses\Commands\" />
       <Folder Include="Application\Handlers\Courses\Queries\" />
       <Folder Include="Application\Handlers\Professors\Queries\" />
       <Folder Include="Application\Handlers\Students\Queries\" />
-      <Folder Include="Application\Handlers\Terms\Commands\" />
       <Folder Include="Application\Handlers\Terms\Queries\" />
       <Folder Include="Application\Mappers\" />
-      <Folder Include="Application\Models\Courses\Commands\" />
       <Folder Include="Application\Models\Courses\Queries\" />
       <Folder Include="Application\Models\Professors\Queries\" />
       <Folder Include="Application\Models\Students\Queries\" />
-      <Folder Include="Application\Models\Terms\Commands\" />
       <Folder Include="Application\Models\Terms\Queries\" />
       <Folder Include="Infrastructure\Migrations\" />
     </ItemGroup>
