@@ -29,4 +29,16 @@ public class CourseController : ControllerBase
         
         return this.ReturnResponse(response);
     }
+    
+    [HttpPost("AddStudentToCourse")]
+    public async Task<IActionResult> AddStudentToCourse([FromBody] AddStudentToCourseRequest request)
+    {
+        var response = await _mediator.Send(new AddStudentToCourseCommand()
+        {
+            CourseId = request.CourseId,
+            StudentId = request.StudentId
+        });
+        
+        return this.ReturnResponse(response);
+    }
 }
