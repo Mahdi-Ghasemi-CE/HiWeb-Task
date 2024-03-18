@@ -29,4 +29,15 @@ public class StudentController: ControllerBase
         
         return this.ReturnResponse(response);
     }
+    
+    [HttpDelete("DeleteStudent")]
+    public async Task<IActionResult> DeleteStudent([FromBody] DeleteStudentRequest request)
+    {
+        var response = await _mediator.Send(new DeleteStudentCommand()
+        {
+            StudentId = request.StudentId
+        });
+        
+        return this.ReturnResponse(response);
+    }
 }
